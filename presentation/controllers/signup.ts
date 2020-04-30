@@ -1,5 +1,6 @@
+import { HttpRequest, HttpResponse } from '../protocols/http'
 export class SignUpController {
-  handle (httpRequest: any): any {
+  handle (httpRequest: HttpRequest): HttpResponse {
     console.log(httpRequest.body.name)
     if (!httpRequest.body.name) {
       return {
